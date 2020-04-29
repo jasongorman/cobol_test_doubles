@@ -1,0 +1,18 @@
+       IDENTIFICATION DIVISION.
+       PROGRAM-ID. VIDEO-LIBRARY-SUITE.
+       DATA DIVISION.
+       FILE SECTION.
+       WORKING-STORAGE SECTION.
+       COPY 'test-context.cpy'.
+       PROCEDURE DIVISION.
+       MAIN-PROCEDURE.
+           DISPLAY "Running VIDEO LIBRARY tests...".
+
+           CALL 'PRICING-TEST' USING TEST-CONTEXT.
+           CALL 'NEW-TITLE-TEST' USING TEST-CONTEXT.
+
+           DISPLAY 'Tests run: ' TESTS-RUN.
+           DISPLAY 'Passed: ' PASSES.
+           DISPLAY 'Failed: ' FAILURES.
+
+       END PROGRAM VIDEO-LIBRARY-SUITE.
